@@ -1,0 +1,13 @@
+Testing code threads
+
+Test 1 - network buffer size: 10, output file: testOutput1.txt
+Test 2 - network buffer size: 15, output file: testOutput2.txt
+Test 3 - network buffer size: 20, output file: testOutput3.txt
+
+
+There is no significant difference in the running times between the three test, but we did notice
+that during the second test, the client sending thread was terminated before the receiving thread 
+(this is the opposite of the 2nd and 3rd tests). This is most likely because of the unpredictable 
+order of the thread execution. We know that the network thread will be the first one to be executed, 
+but we can't know for sure which of the others will run next. Note that these tests were executed 
+on the same machine, running the exact same programs and were done a few seconds apart.
