@@ -12,6 +12,7 @@
 \usepackage[english]{babel}
 \usepackage{enumitem}
 \usepackage{titling}
+\usepackage{tabularx}
 \renewcommand\maketitlehooka{\null\mbox{}\vfill}
 \renewcommand\maketitlehookd{\vfill\null}
 
@@ -78,20 +79,76 @@ The only circumstance where time sharing would make sense is when there is more 
 
 \section*{Question #2}
 \subsection*{Consider a computer system with a single-core processor. There are two processes to run in the system: P1 and P2. Process P1 has a life cycle as follows: CPU burst time of 15 units, followed by I/O burst time of minimum 10 units, followed by CPU burst time of 10 units. Process P2 has the following life cycle: CPU burst time of 10 units, followed by I/O burst time of minimum 5 units, followed by CPU burst time of 15 units. Now answer the following questions:}
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{0.4\textwidth} { 
+      | >{\centering\arraybackslash}X 
+      | >{\centering\arraybackslash}X 
+      | >{\centering\arraybackslash}X 
+      | >{\centering\arraybackslash}X | }
+     \hline
+     \textbf{Process} & \textbf{CPU} & \textbf{I/O} & \textbf{CPU} \\
+     \hline
+     \textbf{P1} & 15 & 10 & 10 \\
+     \hline
+     \textbf{P2} & 10 & 5 & 15 \\
+    \hline
+    \end{tabularx}
+\end{table}
+
 \begin{enumerate}[label=\alph*)]
   \item Considering a \textit{single programmed} operating system, what is the minimal total time required to complete executions of the two processes? You should explain your answer with a diagram.
   \begin{itemize}[label={}]
-  \item TODO: ANSWER
+  \item Since its single-programmed, it has to go through all the processes, meaning that it would start by P1 and then go through it and then through P2. The minimal total time required to complete the executions of the two processes is the sum of it all, so 65 units. Hence the order would of been: 
+  \item 
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{0.8\textwidth} { 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X | }
+         \hline
+         \textbf{Process} & \textbf{CPU} & \textbf{I/O} & \textbf{CPU} & \textbf{CPU} & \textbf{I/O} & \textbf{CPU} \\
+         \hline
+         \textbf{P} & 15 & 10 & 10 & 10 & 5 & 15 \\
+         \hline
+        \end{tabularx}
+    \end{table}
   \end{itemize}
   
   \item Now considering a \textit{multiprogrammed} operating system, what is the minimal total time required to complete executions of the two processes? You should explain your answer with a diagram.
   \begin{itemize}[label={}]
-  \item TODO: ANSWER
+  \item Since its multi-programmed, it does not have to go through the I/O, meaning that the I/O time can be omitted from the calculation. The minimal total time required to complete the executions of the two processes is the sum of it all, minus the I/O, so 50 units. Hence the order would of been: 
+  \item 
+    \begin{table}[h]
+        \centering
+        \begin{tabularx}{0.8\textwidth} { 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X 
+          | >{\centering\arraybackslash}X | }
+         \hline
+         \textbf{Process} & \textbf{CPU} & \textbf{CPU} & \textbf{CPU} & \textbf{CPU} \\
+         \hline
+         \textbf{P} & 15 & 10 & 10 & 15 \\
+         \hline
+        \end{tabularx}
+    \end{table}
   \end{itemize}
+
   
   \item \textit{Throughput} is defined as the number of processes (tasks) completed per unit time. Following this definition, calculate the throughputs for parts a) and b) above. How does multiprogramming affect throughput? Explain your answer.
   \begin{itemize}[label={}]
-  \item TODO: ANSWER
+  \item Since the throughput is the number of tasks performed per unit of time, we can simply divide 2 (the total amount of tasks) by the minimal total time required to complete the executions, hence:
+  \item Single-programmed: \[ 2/65 = 0.031 \]
+  \item Multi-programmed: \[ 2/50 = 0.040 \]
+  \item We can see that the multi-programmed operating system has a higher throughput (because it doesn't wait for the I/O) and so its more efficient. 
   \end{itemize}
 \end{enumerate}
 
