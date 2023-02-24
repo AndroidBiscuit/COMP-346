@@ -38,38 +38,38 @@
 
 \section*{Question #1}
 \subsection*{I - What is an operating system? What are the main purposes of an operating system?}
-ANSWER
+An OS is a program whose objective is to link the hardware components with the software components (users and applications). It can take care of monitoring and allocating resources so that other programs (and the people who code them) don't have to deal with it as well as making sure that the hardware components' performance is at its best,
 
 \subsection*{II - Define the essential properties of the following types of operating systems:}
 \begin{itemize}
   \item Batch 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item Useful for multiprogramming efficiency
   \end{itemize}
   
   \item Time sharing 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item Useful for making interactive computing (multiple users can interact with multiple jobs)
   \end{itemize}
   
   \item Dedicated 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item Useful for single-purpose programs (no need to switch to another program)
   \end{itemize}
   
   \item Parallel 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Multiprogramming 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item Useful for organizing the processes or jobs so that the processor only has to focus and execute one
   \end{itemize}
 \end{itemize}
 
 \subsection*{III - Under what circumstances would a user be better of using a time-sharing system rather than a PC or single-user workstation?}
-ANSWER
+The only circumstance where time sharing would make sense is when there is more than one user who uses the machine. Since the number of users is limited, the required power of the task can be shared and it would not negatively affect the performance too much. For a single user working on a small task, it would be better to go with a PC.
 
 \pagebreak
 
@@ -81,17 +81,17 @@ ANSWER
 \begin{enumerate}[label=\alph*)]
   \item Considering a \textit{single programmed} operating system, what is the minimal total time required to complete executions of the two processes? You should explain your answer with a diagram.
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Now considering a \textit{multiprogrammed} operating system, what is the minimal total time required to complete executions of the two processes? You should explain your answer with a diagram.
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item \textit{Throughput} is defined as the number of processes (tasks) completed per unit time. Following this definition, calculate the throughputs for parts a) and b) above. How does multiprogramming affect throughput? Explain your answer.
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
 \end{enumerate}
 
@@ -104,20 +104,20 @@ ANSWER
 \section*{Question #3}
 \subsection*{I - What is the performance advantage in having device drivers and devices synchronize by means of device interrupts, rather than by polling (i.e., device driver keeps on polling the device to see if a specific event has occurred)? Under what circumstances can polling be advantageous
 over interrupts?}
-ANSWER
+TODO: ANSWER
 
 \subsection*{II - Is it possible to use a DMA controller if the system does not support interrupts? Explain why.}
-ANSWER
+TODO: ANSWER
 
 \subsection*{III - The procedure \textit{ContextSwitch} is called whenever there is a switch in context from a running program A to another program B. The procedure is a straightforward assembly language routine that saves and restores registers, and must be atomic. Something disastrous can happen if the routine \textit{ContextSwitch} is not atomic}
 \begin{enumerate}[label=\alph*)]
   \item Explain why \textit{ContextSwitch} must be atomic, possibly with an example.
   \begin{itemize}[label={}]
-  \item ANSWER.
+  \item TODO: ANSWER.
   \end{itemize}
   \item Explain how the atomicity can be achieved in practice.
   \begin{itemize}[label={}]
-  \item ANSWER.
+  \item TODO: ANSWER.
   \end{itemize}
 \end{enumerate}
 
@@ -129,17 +129,17 @@ ANSWER
 
 \section*{Question #4}
 \subsection*{I - If a user program needs to perform I/O, it needs to trap the OS via a system call that transfers control to the kernel. The kernel performs I/O on behalf of the user program. However, systems calls have added overheads, which can slow down the entire system. In that case, why not let user processes perform I/O directly, without going through the kernel?}
-ANSWER
+TODO: ANSWER
 
 \subsection*{II - Consider a computer running in the user mode. It will switch to the monitor mode whenever an interrupt or trap occurs, jumping to the address determined from the interrupt vector.}
 \begin{enumerate}[label=\alph*)]
   \item A smart, but malicious, user took advantage of a certain serious loophole in the computer's protection mechanism, by which he could make run his own user program in the monitor mode! This can cause disastrous effects. What could have he possibly done to achieve this? What disastrous effects could it cause?
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   \item Suggest a remedy for the loophole.
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
 \end{enumerate}
 
@@ -154,11 +154,11 @@ ANSWER
 \begin{enumerate}[label=\alph*)]
   \item How would it be possible that the time to complete the N processes could be as small as: \textit{maximum} (t1, t2, …,tN)?
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   \item How would it be possible that the total execution time, T > t1+ t2+ …+tN? In other words, what would cause the total execution time to exceed the sum of individual process execution times? 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
 \end{enumerate}
 
@@ -173,37 +173,37 @@ ANSWER
 \begin{enumerate}[label=(\roman*)]
   \item Read the system clock 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Clear memory 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Reading from user space 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Writing to user space 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Copy from one register to another 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Turn off interrupts 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
   
   \item Switch from user to monitor mode 
   \begin{itemize}[label={}]
-  \item ANSWER
+  \item TODO: ANSWER
   \end{itemize}
 \end{enumerate}
 
@@ -215,7 +215,7 @@ ANSWER
 
 \section*{Question #7}
 \subsection*{Assume you are given the responsibility to design two OS systems, a Network Operating System and a Distributed Operating System. Indicate the primary differences between these two systems. Additionally, you need to indicate if there any possible common routines between these systems? If yes, indicate some of these routines. If no, explain why common routines between these two particular systems do not make sense. }
-ANSWER
+TODO: ANSWER
 
 
 \end{document}
