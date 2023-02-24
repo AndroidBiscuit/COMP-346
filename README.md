@@ -10,3 +10,7 @@ There will be 3 or 4 programming assignments. These assignments are designed to 
 
 # Deadlines
 - Programmming assignment 1: Monday, 13 February 2023, 11:59 PM
+- Demo 1: Sunday, 26 February 2023, 8:30 PM
+
+- Programmming assignment 2: Monday, 13 March 2023, 11:59 PM
+- Demo 2: 
