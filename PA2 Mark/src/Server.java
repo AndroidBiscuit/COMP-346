@@ -207,7 +207,7 @@ public class Server extends Thread {
         
         try
         {
-         inputStream = new Scanner(new FileInputStream("C:\\Users\\marka\\VS Code-workspace\\Java Projects\\COMP346\\PA2\\account.txt"));
+         inputStream = new Scanner(new FileInputStream("account.txt"));
         }
         catch(FileNotFoundException e)
         {
@@ -429,23 +429,18 @@ public class Server extends Thread {
 	/* System.out.println("\n DEBUG : Server.run() - starting server thread " + objNetwork.getServerConnectionStatus()); */
     	
     	/* .....................................................................................................................................................................................................*/
-      
-    // This is what I was thinking of doing. Not sure how tho and how to measure each thread time.
     
-    //  while (!serverThreadRunningStatus1.equals("terminated") && !serverThreadRunningStatus2.equals("terminated"))    
-        
-            server1StartTime = System.currentTimeMillis();
-            server2StartTime = System.currentTimeMillis();
+           serverStartTime = System.currentTimeMillis();
             
-            processTransactions(trans);
+           processTransactions(trans);
 
-            server1EndTime = System.currentTimeMillis();
-            server2EndTime = System.currentTimeMillis();
+           serverEndTime = System.currentTimeMillis();
 
     
-        System.out.println("\n Terminating server threads - " + " Running time of thread1 " 
-            + (server1EndTime - server1StartTime) + " milliseconds\nRunning time of thread2 "+ (server2EndTime - server2StartTime) + " milliseconds");
-
+        System.out.println("\n Terminating server thread - " + " Running time of " + serverThreadId + " "
+            + (serverEndTime - serverStartTime) + " milliseconds");
+  
+    
         Network.disconnect((Network.getServerIP()));
         
 	
